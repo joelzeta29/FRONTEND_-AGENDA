@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    html,body{
+        margin: 0; padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }  
+    #calendar{ max-width: 900px; margin: 40px auto;}  
+    </style>
+<!--css de Bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+
+
+<!--js de Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
+
+<!--codigo de fullcalendar-->
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    
+        
+    <!--funcionalidad y uso de Fullcalendar-->
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            
+            
+            initialView: 'dayGridMonth'
+          });
+          calendar.setOption('locale','Es');
+          calendar.render();
+        });
+  
+      </script>
+</head>
+<body>
+   <div class="alert alert-danger">¡Hola Mundo!</div> 
+   <div id="calendar"></div> 
+</body>
+</html>
